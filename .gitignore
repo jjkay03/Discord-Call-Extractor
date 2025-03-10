@@ -1,7 +1,5 @@
 # Ignore everything in folders
 logs/*
 data/*
+data/selenium_browser_profile/*
 modules/__pycache__/*
-
-# Exception to the rules
-!data/.gitkeep
