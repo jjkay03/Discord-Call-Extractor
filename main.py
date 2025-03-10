@@ -21,5 +21,8 @@ conn = setup_database(db_filename)
 # Let the user choose when to start
 input(colorama.Fore.GREEN + "Press Enter to start tracking Discord calls..." + colorama.Fore.RESET)
 
+# Scrap page to extract all call data
+extract_call_data(driver, conn)
+
 # End
 input(colorama.Fore.LIGHTRED_EX + "END -- END -- END -- END" + colorama.Fore.RESET)

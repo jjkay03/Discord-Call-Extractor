@@ -44,8 +44,8 @@ def store_call_in_db(conn, call):
     '''
             
     cursor.execute('''
-    INSERT INTO calls (username, duration, duration_minutes, timestamp, date_recorded)
-    VALUES (?, ?, ?, ?, ?)
+    INSERT INTO calls (username, duration, duration_minutes, timestamp)
+    VALUES (?, ?, ?, ?)
     ''', (
         call["username"],
         call["duration"],
