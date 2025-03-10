@@ -1,8 +1,9 @@
 from .database import store_call_in_db
-import time
-import sys
+from selenium.webdriver.common.keys import Keys
 from bs4 import BeautifulSoup
 import colorama
+import time
+import sys
 
 def extract_call_data(driver, conn):
     seen_calls = set()  # To avoid storing duplicate calls
@@ -46,16 +47,17 @@ def extract_call_data(driver, conn):
                 store_call_in_db(conn, call)  # Store in DB instantly
 
                 # Print in green to make it more visible
-                print(colorama.Fore.LIGHTBLUE_EX + "Extracted call: " + colorama.Fore.RESET + str(call) )
+                print(colorama.Fore.LIGHTBLUE_EX + "Extracted call: " + colorama.Fore.RESET + str(call))
 
                 # Mark this call as seen
                 seen_calls.add(call_id)
 
-            # Scroll up
-            driver.execute_script("window.scrollTo(0, 0);")
+            # Simulate scrolling up using "Page Up" key
+            body = driver.find_element("tag name", "body")
+            body.send_keys(Keys.PAGE_UP)
 
             # Wait for content to load
-            time.sleep(1)
+            time.sleep(0.3)
 
     except KeyboardInterrupt:
         print(colorama.Fore.YELLOW + "Stopping call extraction..." + colorama.Fore.RESET)
