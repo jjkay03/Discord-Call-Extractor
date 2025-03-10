@@ -1,0 +1,7 @@
+# Ignore everything in folders
+logs/*
+data/*
+modules/__pycache__/*
+
+# Exception to the rules
+!data/.gitkeep
