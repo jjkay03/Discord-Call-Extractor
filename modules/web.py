@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 import time
 import os
+import colorama
 
 # Function to setup discord browser
 def setup_discord_browser():
@@ -20,7 +21,7 @@ def setup_discord_browser():
     driver.get("https://discord.com/login")
     
     # Let the user login manually
-    print("Please log in to Discord. The program will continue once you're logged in.")
+    print(colorama.Fore.GREEN + "Please log in to Discord. The program will continue once you're logged in." + colorama.Fore.RESET)
     
     # Wait for Discord to fully load by looking for the friends button container
     WebDriverWait(driver, 300).until(
@@ -32,5 +33,5 @@ def setup_discord_browser():
 # Function that navigates browser to link
 def navigate_to_link(driver, link):
     driver.get(link)
-    print(f"Navigated to link: {link}")
+    print(colorama.Fore.YELLOW + f"Navigated to link: {link}" + colorama.Fore.RESET)
     time.sleep(3)  
