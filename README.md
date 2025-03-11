@@ -16,6 +16,8 @@ The program uses [selenium](https://github.com/SeleniumHQ/selenium/tree/trunk) t
 
 5. Once the program is done going through the chat, the user can press `Ctrl + C` in the console to end the program.
 
+6. The database file will be saved in `data/database/...` with the name you chose for it in `main.py`.
+
 ⚠ All the browser data and login token for Discord ect. are saved in `data/selenium_browser_profile` be careful with this folder! (For dev its not tracked by Git)
 
 **Console extracting calls:**
