@@ -1,6 +1,6 @@
-# Discord-Group-Call
+# <img src="https://github.com/user-attachments/assets/f31cac3d-d008-44c5-b12c-316dcdeca501" width="50"> Discord Call Extractor
 
-This is a simple Python project that collects HTML data from a Discord group to create a database of calls that happened in the group (or DM conversation).
+This is a simple Python project that analyze and extract HTML data from a Discord group to create a database of calls that happened in the group (or DM conversation).
 
 <br>
 
