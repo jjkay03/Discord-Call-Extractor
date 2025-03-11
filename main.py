@@ -2,8 +2,8 @@ from modules import *  # Import all custom modules in /modules dir
 from datetime import datetime
 import colorama
 
-group_link = "https://discord.com/channels/@me/974077775638069338"
-db_name = "974077775638069338"
+group_link = "https://discord.com/channels/@me/..." # Example link to group chat
+db_name = "calls-database"
 timestamp = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 
 # Initialize colorama
